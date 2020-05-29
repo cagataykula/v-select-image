@@ -1,6 +1,6 @@
 {
   "name": "v-select-image",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "private": false,
   "main": "./dist/v-select-image.common.js",
   "scripts": {
