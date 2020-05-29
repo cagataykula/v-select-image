@@ -47,7 +47,7 @@
 </template>
 
 <script>
-import VSelectImage from './VueSelectImage'
+import VSelectImage from './VSelectImage'
 
 export default {
   name: 'App',
