@@ -1,7 +1,7 @@
 # Vue Select Image
 
 Its is a Vue.js component for selecting images. 
-
+![Vue Select Image Demo](https://raw.githubusercontent.com/cagataykula/v-select-image/master/src/assets/demo.gif)
 
 # Installation
 
