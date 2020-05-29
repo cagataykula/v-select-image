@@ -5,8 +5,7 @@
   "main": "./dist/v-select-image.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "build-bundle": "vue-cli-service build --target lib --name v-select-image ./src/index.js",
+    "build": "vue-cli-service build --target lib --name v-select-image ./src/index.js",
     "lint": "vue-cli-service lint"
   },
   "files": [
