@@ -20,8 +20,6 @@ export default {
   components: { item },
   props: {
     items: Array,
-    apiUrl: String,
-    successAction: Object,
     colorSchema: {
       required: false,
       type: String,
@@ -31,11 +29,6 @@ export default {
       required: false,
       type: [String, Number],
       default: -1
-    },
-    texts: {
-      required: false,
-      type: Object,
-      default: () => {}
     },
     uniqueKey: {
       required: false,
@@ -71,7 +64,7 @@ export default {
             maxSelectableItem != -1 &&
             this.selectedItems.length >= maxSelectableItem
           ) {
-            return this.$emit('maxSelectionFunction')
+            return this.$emit('maxSelectionError')
           }
           this.selectedItems.push(item)
         }

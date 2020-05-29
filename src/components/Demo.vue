@@ -2,14 +2,14 @@
   <div class="d-flex flex-column justify-center align-center">
     <div class="d-flex flex-row justify-center align-center">
 
-      <VueSelectImage
+      <v-select-image
         class="w-650"
         v-model="selectedItems"
         :items="items"
         :colorSchema="colorSchema"
         uniqueKey="key"
         :maxSelectable="maxSelectable"
-        @maxSelectionFunction="maxSelected()"
+        @maxSelectionError="maxSelected()"
       />
     </div>
     <div class="">
@@ -47,11 +47,11 @@
 </template>
 
 <script>
-import VueSelectImage from './VueSelectImage'
+import VSelectImage from './VueSelectImage'
 
 export default {
   name: 'App',
-  components: { VueSelectImage },
+  components: { VSelectImage },
   methods: {
     maxSelected () {
       alert('You cant select more than ' + this.maxSelectable)

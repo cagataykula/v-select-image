@@ -1,3 +1,3 @@
-import VueSelectImage from './components/VueSelectImage.vue'
+import VSelectImage from './components/VueSelectImage.vue'
 
-export default VueSelectImage
+export default VSelectImage
