@@ -1,24 +1,69 @@
 # Vue Select Image
 
-Its is a Vue.js component for selecting images. 
+Vue Select Image is a Vue.js component for selecting images.
 ![Vue Select Image Demo](https://raw.githubusercontent.com/cagataykula/v-select-image/master/src/assets/demo.gif)
 
 # Installation
 
-Firstly you can install with only npm for now
+Use the npm package manager to install it in your project.
 
     npm install --save v-select-image
-After installation you have to import component wherever want you to use.
 
-    import VueSelectImage from 'v-select-image'
-After that you have to register it as a component in your script
+# Basic Usage
 
-    <script>
-	    components: { VueSelectImage }
-    </script>
+The most common usage is to pass a data array to the component and include it in your project.
 
+   
+	import vSelectImage from 'v-select-image'
 
-## Usage
+    new Vue({
+        el: '#select',
+        template:'<v-select-image :items="myItems" v-model="selectedItems"/>',
+        components:{vSelectImage},
+        data: {
+			selectedItems:[],
+            myItems: [
+              {
+                id: 1,
+                title: '',
+                backgroundImage: 'https://picsum.photos/300/300?id=1',
+                selectable: true
+              },
+              {
+                id: 2,
+                title: '',
+                backgroundImage: 'https://picsum.photos/300/300?id=2',
+                selectable: true
+              },
+              {
+                id: 3,
+                title: '',
+                backgroundImage: 'https://picsum.photos/300/300?id=3',
+                selectable: true
+              },
+              {
+                id: 4,
+                title: '',
+                backgroundImage: 'https://picsum.photos/300/300?id=4',
+                selectable: true
+              },
+              {
+                id: 5,
+                title: '',
+                backgroundImage: 'https://picsum.photos/300/300?id=5',
+                selectable: true
+              },
+              {
+                id: 6,
+                title: '',
+                backgroundImage: 'https://picsum.photos/300/300?id=6',
+                selectable: true
+              }],
+            selectedVal: null
+        }
+    })
+
+## Parameters
 
 You can use easily with use **\<v-select-image\>** tag.
 Example:
@@ -27,7 +72,7 @@ Example:
     	class="w-650"
     	v-model="selectedItems"
     	:items="items"
-    	colorSchema="##8B8B8B"
+    	colorSchema="#8B8B8B"
     />
     
 
@@ -42,7 +87,7 @@ You can add some parameters to customizing.
 |uniqueKey|String|false|id|
 
 ## Max Selection Error Handling
-You can add **@maxSelectionError** prop to the **\<v-select-image\>** tag.
+You can add **@maxSelectionError** prop to the **\<v-select-image\>** tag to handle maximum number of selected items.
  
  Example: 
 
@@ -56,4 +101,4 @@ You can add **@maxSelectionError** prop to the **\<v-select-image\>** tag.
 
 ## Bugs and Improvements
 
-If you can find a bug or design issue you can open an issue on GitHub or you can fix directly. Dont hesitate to contribute
+If you can find a bug or design issues you can open an issue on GitHub. Don't hesitate to contribute. Your feedback is appreciated!
